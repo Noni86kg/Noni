@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+$gray: #303633;  /* rgb(48,54,51) */
+$lightGray: #f2f2f2;
+$green: #8bebcd; /* rgb(139, 232, 203)  */
+$pink: #9c7a97;  /* rgb(156, 122, 151) */
+$white: #fff;
+$headings: 'Source Sans Pro', sans-serif;
+$text: 'Lato', sans-serif;
+$transition: .3s ease;
+$font: 16px;
+/****************
+mixins
+****************/
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin btn($bg, $color, $border) {
+    border: $border;
+    color: $color;
+    background: $bg;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: $transition;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    font-weight: 900;
+    &:hover {
+        border: 2px solid $pink;
+        color: $pink;
+        transition: $transition;
+    }
+}
+/****************
+basic styles
+****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $text;
+    font-size: $font;
+    color: $gray;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+}
+/****************
+aside
+****************/
+aside {
+    @include flex(center, flex-end, column);
+    flex:1;
+    padding: 50px;
+    background-image: linear-gradient(rgba(156, 122, 151, 0.7),rgba(156, 122, 151, 0.9)),url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    @media(max-width: 1024px){
+        flex: 0 0 100%;
+        position: relative;
+    }
+    img {
+        margin-top: 25px;
+        width: 50%;
+        border-radius: 50%;
+        border: 4px solid $pink;
+    }
+    p {
+        color: white;
+        text-align: right;
+        padding: 20px 0;
+        font-size: 1.2rem;
+        span {
+            color: $green;
+        }
+    }
+    i {
+        color: $green;
+        margin-left: 30px;
+        font-size: 1.6rem;
+        &:hover{
+            color: white;
+        }
+    }
+}
+/****************
+main
+****************/
+main {
+    @include flex(none, none, column);
+    flex:2;
+    padding: 40px;  
+    @media(max-width: 767px){
+        flex: 0 0 100%;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h2::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 75px;
+        background: $gray;
+        margin: 25px 0;
+    }
+}
+/****************
+About
+****************/
+.about {
+    padding-bottom: 50px;
+    border-bottom: 1px solid $gray;
+    p {
+        padding-bottom: 25px;
+    }
+    button {
+        @include btn(transparent, $green, 2px solid $green);
+    }
+}
+/****************
+Portfolio
+****************/
+.portfolio {
+    padding: 30px 0;
+    border-bottom: 1px solid $gray;
+    section {
+        @include flex(space-between, center, row);
+        margin: 0 auto;
+    }
+        article {
+            flex: 0 0 49%;
+            @media(max-width: 767px){
+                flex: 0 0 100%;
+            }
+            padding: 10px;
+            &:hover{
+                transform: scale(1.1);
+                transition: $transition;
+            }
+        }
+            img{
+                width: 100%;
+            }
+            h3{
+                color: $pink;
+                font-size: 2rem;
+        }
+    button {
+        @include btn(transparent, $green, 2px solid $green);
+        margin: 30px 10px;
+    }
+}
+/****************
+Footer
+****************/
+footer {
+    padding-top: 30px;
+    section {
+        @include flex(center, none, row);
+        article:first-child{
+            flex: 5;
+            @media(max-width: 767px){
+                flex: 0 0 100%;
+            }
+            form{
+            width: 90%;
+                div{
+                    width: 100%;
+                    @include flex(space-between, center , row);
+                    input {
+                        width: 48%;
+                        line-height: 2.5;
+                        border: none;
+                        background: $lightGray;
+                        padding-left: 3px;
+                    }  
+                }
+                textarea{
+                    width: 100%;
+                    height: 200px;
+                    margin: 10px 0;
+                    line-height: 2.5;
+                    border: none;
+                    background: $lightGray;
+                    padding-left: 3px;
+                    }  
+                }
+                button {
+                    @include btn($pink,white ,none);
+                    &:hover {
+                        background: $green;
+                        color: white;
+                        border: none;
+                    }
+                }
+            }
+        }
+        article:last-child{
+            flex: 3;
+            @media(max-width: 767px){
+                flex: 0 0 100%;
+            }
+            i {
+                color: $pink;
+                padding: 20px 0;
+            }
+        }
+    }

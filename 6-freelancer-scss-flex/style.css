@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+/* rgb(48,54,51) */
+/* rgb(139, 232, 203)  */
+/* rgb(156, 122, 151) */
+/****************
+mixins
+****************/
+/****************
+basic styles
+****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #303633;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap; }
+
+/****************
+aside
+****************/
+aside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  flex: 1;
+  padding: 50px;
+  background-image: linear-gradient(rgba(156, 122, 151, 0.7), rgba(156, 122, 151, 0.9)), url(img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0; }
+  @media (max-width: 1024px) {
+    aside {
+      flex: 0 0 100%;
+      position: relative; } }
+  aside img {
+    margin-top: 25px;
+    width: 50%;
+    border-radius: 50%;
+    border: 4px solid #9c7a97; }
+  aside p {
+    color: white;
+    text-align: right;
+    padding: 20px 0;
+    font-size: 1.2rem; }
+    aside p span {
+      color: #8bebcd; }
+  aside i {
+    color: #8bebcd;
+    margin-left: 30px;
+    font-size: 1.6rem; }
+    aside i:hover {
+      color: white; }
+
+/****************
+main
+****************/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  align-items: none;
+  flex-direction: column;
+  flex: 2;
+  padding: 40px; }
+  @media (max-width: 767px) {
+    main {
+      flex: 0 0 100%;
+      padding: 20px; } }
+  main h2 {
+    font-size: 2.5rem; }
+  main h2::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 75px;
+    background: #303633;
+    margin: 25px 0; }
+
+/****************
+About
+****************/
+.about {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #303633; }
+  .about p {
+    padding-bottom: 25px; }
+  .about button {
+    border: 2px solid #8bebcd;
+    color: #8bebcd;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    font-weight: 900; }
+    .about button:hover {
+      border: 2px solid #9c7a97;
+      color: #9c7a97;
+      transition: 0.3s ease; }
+
+/****************
+Portfolio
+****************/
+.portfolio {
+  padding: 30px 0;
+  border-bottom: 1px solid #303633; }
+  .portfolio section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto; }
+  .portfolio article {
+    flex: 0 0 49%;
+    padding: 10px; }
+    @media (max-width: 767px) {
+      .portfolio article {
+        flex: 0 0 100%; } }
+    .portfolio article:hover {
+      transform: scale(1.1);
+      transition: 0.3s ease; }
+  .portfolio img {
+    width: 100%; }
+  .portfolio h3 {
+    color: #9c7a97;
+    font-size: 2rem; }
+  .portfolio button {
+    border: 2px solid #8bebcd;
+    color: #8bebcd;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    font-weight: 900;
+    margin: 30px 10px; }
+    .portfolio button:hover {
+      border: 2px solid #9c7a97;
+      color: #9c7a97;
+      transition: 0.3s ease; }
+
+/****************
+Footer
+****************/
+footer {
+  padding-top: 30px; }
+  footer section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: none;
+    flex-direction: row; }
+    footer section article:first-child {
+      flex: 5; }
+      @media (max-width: 767px) {
+        footer section article:first-child {
+          flex: 0 0 100%; } }
+      footer section article:first-child form {
+        width: 90%; }
+        footer section article:first-child form div {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row; }
+          footer section article:first-child form div input {
+            width: 48%;
+            line-height: 2.5;
+            border: none;
+            background: #f2f2f2;
+            padding-left: 3px; }
+        footer section article:first-child form textarea {
+          width: 100%;
+          height: 200px;
+          margin: 10px 0;
+          line-height: 2.5;
+          border: none;
+          background: #f2f2f2;
+          padding-left: 3px; }
+      footer section article:first-child button {
+        border: none;
+        color: white;
+        background: #9c7a97;
+        cursor: pointer;
+        padding: 10px 30px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        letter-spacing: 1px;
+        font-size: .9rem;
+        font-weight: 900; }
+        footer section article:first-child button:hover {
+          border: 2px solid #9c7a97;
+          color: #9c7a97;
+          transition: 0.3s ease; }
+        footer section article:first-child button:hover {
+          background: #8bebcd;
+          color: white;
+          border: none; }
+  footer article:last-child {
+    flex: 3; }
+    @media (max-width: 767px) {
+      footer article:last-child {
+        flex: 0 0 100%; } }
+    footer article:last-child i {
+      color: #9c7a97;
+      padding: 20px 0; }
+
+/*# sourceMappingURL=style.css.map */
