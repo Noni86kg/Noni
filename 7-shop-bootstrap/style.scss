@@ -1,0 +1,185 @@
+$blue:#4831d4;
+$green:#ccf381;
+$lightgray:rgb(247, 247, 247);
+$gray: #333;
+$white: #fff;
+$transition: .3s ease;
+$font: 16px;
+$fontFamily: 'Roboto', sans-serif;
+$boxShadow: 0 0 10px #b7b6b6;
+$textShadow: 0 0 2px #333;
+/***********************
+basic styles
+***********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $font;
+    color: $gray;
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 900;
+}
+a {
+    transition: $transition;
+    color: $gray;
+}
+.bg-lightGray {
+    background: $lightgray;
+}
+button {
+    background: $green;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    color: $gray;
+    &:hover {
+        background: darken($blue, 15%);
+        color: $white;
+        transition: $transition;
+    }
+}
+/***********************
+header
+***********************/
+header {
+    border-bottom: 2px solid $green;
+    .navbar-brand {
+        letter-spacing: 2px;
+        font-size: 2rem;
+        span {
+            color: $green;
+            font-style: italic;
+            text-shadow: $textShadow;
+            font-weight: 700;
+        }
+    }
+    .navbar-text {
+        i {
+            margin-left: 25px;
+            @media(max-width: 1000px) {
+                margin-right: 25px;
+                margin-left: 0px;
+            }
+            &:hover {
+                color: $green;
+                transition: $transition;
+            }
+        }
+    }
+}
+/***********************
+footer
+***********************/
+footer {
+    background: $blue;
+    input[type="email"] {
+        padding-left: 10px;
+        line-height: 2.5;
+    }
+    input[type="submit"] {
+        position: relative;
+        left:-25px;
+        background: $green;
+        padding: 3px 25px;
+        border: none;
+        font-weight: 600;
+        &:hover {
+            background: darken($blue, 15%);
+            color: $white;
+            border: 2px solid black;
+            transition: $transition;
+            padding: -2px;
+        }
+    }
+}
+.bottomFooter {
+    background: $green;
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    i {
+        font-size: 1.2rem;
+        &:hover {
+            color: darken($blue, 15%);
+            transition: $transition;
+        }
+    }
+}
+/***********************
+one
+***********************/
+.one {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    h1 {
+        color: $white;
+        letter-spacing: 2px;
+        span {
+            color: $green;
+        }
+    }
+}
+/***********************
+two
+***********************/
+.two {
+    h2{
+        &::after {
+            display: block;
+            content: "";
+            position: relative;
+            height: 2px;
+            width: 200px;
+            margin: 20px auto;
+            background: #ccf381;
+        }
+    }
+    .col-md-4{
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+        .price {
+            p:first-child {
+            text-decoration: line-through;
+            color: $blue;
+            }
+        }
+    }
+}
+/***********************
+shop
+***********************/
+.shopCards {
+        i {
+            color: $green;
+            font-size: 2rem;
+        }
+}
+.shopBg {
+    background-image: url(img/shop.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+/***********************
+product
+***********************/
+.product {
+    h4{
+        color: $green;
+        text-shadow: $textShadow;
+    }
+    .far{
+      padding: 13px;
+    }
+  }

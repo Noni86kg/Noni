@@ -1,0 +1,178 @@
+/***********************
+basic styles
+***********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 900;
+}
+
+a {
+  transition: 0.3s ease;
+  color: #333;
+}
+
+.bg-lightGray {
+  background: #f7f7f7;
+}
+
+button {
+  background: #ccf381;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  color: #333;
+}
+button:hover {
+  background: #312099;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/***********************
+header
+***********************/
+header {
+  border-bottom: 2px solid #ccf381;
+}
+header .navbar-brand {
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+header .navbar-brand span {
+  color: #ccf381;
+  font-style: italic;
+  text-shadow: 0 0 2px #333;
+  font-weight: 700;
+}
+header .navbar-text i {
+  margin-left: 25px;
+}
+@media (max-width: 1000px) {
+  header .navbar-text i {
+    margin-right: 25px;
+    margin-left: 0px;
+  }
+}
+header .navbar-text i:hover {
+  color: #ccf381;
+  transition: 0.3s ease;
+}
+
+/***********************
+footer
+***********************/
+footer {
+  background: #4831d4;
+}
+footer input[type=email] {
+  padding-left: 10px;
+  line-height: 2.5;
+}
+footer input[type=submit] {
+  position: relative;
+  left: -25px;
+  background: #ccf381;
+  padding: 3px 25px;
+  border: none;
+  font-weight: 600;
+}
+footer input[type=submit]:hover {
+  background: #312099;
+  color: #fff;
+  border: 2px solid black;
+  transition: 0.3s ease;
+  padding: -2px;
+}
+
+.bottomFooter {
+  background: #ccf381;
+}
+.bottomFooter .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.bottomFooter i {
+  font-size: 1.2rem;
+}
+.bottomFooter i:hover {
+  color: #312099;
+  transition: 0.3s ease;
+}
+
+/***********************
+one
+***********************/
+.one {
+  background-image: url(img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.one h1 {
+  color: #fff;
+  letter-spacing: 2px;
+}
+.one h1 span {
+  color: #ccf381;
+}
+
+/***********************
+two
+***********************/
+.two h2::after {
+  display: block;
+  content: "";
+  position: relative;
+  height: 2px;
+  width: 200px;
+  margin: 20px auto;
+  background: #ccf381;
+}
+.two .col-md-4 img {
+  object-fit: cover;
+  width: 100%;
+}
+.two .col-md-4 .price p:first-child {
+  text-decoration: line-through;
+  color: #4831d4;
+}
+
+/***********************
+shop
+***********************/
+.shopCards i {
+  color: #ccf381;
+  font-size: 2rem;
+}
+
+.shopBg {
+  background-image: url(img/shop.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+
+/***********************
+product
+***********************/
+.product h4 {
+  color: #ccf381;
+  text-shadow: 0 0 2px #333;
+}
+.product .far {
+  padding: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */
