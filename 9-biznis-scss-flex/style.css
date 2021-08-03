@@ -1,0 +1,413 @@
+/*********************
+variables
+*********************/
+/*********************
+basic styles
+*********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+}
+
+h2, h3, h4, h6 {
+  font-weight: 600;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/***********
+nav
+***********/
+nav {
+  background: linear-gradient(to right, #ef1f52, #cccac5);
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    display: none;
+  }
+}
+nav .log {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+nav .log p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 5px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #1f1f1f;
+  padding: 15px 20px;
+}
+nav ul li a:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+nav ul button {
+  padding: 15px 40px;
+  background: #ef1f52;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+nav ul button:hover {
+  background: #1f1f1f;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+nav ul i {
+  padding: 15px;
+  background: #1f1f1f;
+  color: #fff;
+  margin: 0 5px;
+}
+
+/***********
+header
+***********/
+header {
+  background-image: url(img/header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 76vh;
+  padding-right: 0px;
+}
+@media (max-width: 768px) {
+  header .container {
+    padding: 0 25px;
+    align-items: center;
+    text-align: center;
+  }
+}
+header .container h1 {
+  font-size: 3rem;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  header .container h1 {
+    text-align: center;
+  }
+}
+header .container h3 {
+  color: #ef1f52;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+header .container p {
+  color: #ef1f52;
+  margin-bottom: 15px;
+}
+header .container button {
+  padding: 15px 40px;
+  background: #ef1f52;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+header .container button:hover {
+  background: #1f1f1f;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/***********
+oneTwo
+***********/
+.oneTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+@media (max-width: 768px) {
+  .oneTwo {
+    flex-direction: column;
+  }
+}
+.oneTwo .left {
+  flex: 1;
+  font-size: 7rem;
+  color: #cccac5;
+  font-weight: 900;
+  text-align: left;
+}
+.oneTwo .right {
+  flex: 11;
+  padding-left: 50px;
+}
+@media (max-width: 768px) {
+  .oneTwo .right {
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+.oneTwo .right h2 {
+  font-size: 2rem;
+}
+.oneTwo .right h2 span {
+  color: #ef1f52;
+}
+
+/***********
+About
+***********/
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #1f1f1f;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+}
+.about article:first-child {
+  flex: 5;
+}
+.about article:first-child img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+.about article:last-child {
+  padding: 35px;
+  flex: 6;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .about article:last-child {
+    text-align: center;
+  }
+}
+.about article:last-child h2 {
+  font-size: 2.5rem;
+}
+
+/***********
+Marketing
+***********/
+.marketing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 25px 0;
+}
+.marketing article {
+  flex: 30%;
+  border: 2px solid #1f1f1f;
+  margin: 0 50px 50px 0;
+  padding: 25px;
+}
+@media (max-width: 768px) {
+  .marketing article {
+    margin: 30px;
+  }
+}
+.marketing article i {
+  font-size: 4rem;
+  color: #ef1f52;
+}
+.marketing article h2 {
+  padding: 25px 0;
+}
+.marketing article p::before {
+  display: block;
+  content: "";
+  border-top: 2px solid gray;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+/***********
+three
+***********/
+.three {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 25px 0;
+}
+.three button {
+  padding: 15px 40px;
+  background: #ef1f52;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin: 25px 0;
+}
+.three button:hover {
+  background: #1f1f1f;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.three button:hover {
+  background-color: #fff;
+  color: #1f1f1f;
+}
+.three .numbers {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .three .numbers {
+    flex-direction: column;
+  }
+}
+.three .numbers article {
+  color: #ef1f52;
+  text-align: center;
+}
+.three .numbers article p {
+  font-weight: 900;
+  font-size: 4rem;
+}
+.three .numbers article h3 {
+  font-size: 1.5rem;
+}
+.three .numbers article h3::after {
+  display: block;
+  content: "";
+  border-top: 2px solid #fff;
+  width: 60%;
+  margin: 25px auto;
+  padding-bottom: 25px;
+}
+
+/***********
+team
+***********/
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.team article {
+  flex: 0 0 30%;
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .team article {
+    flex: 0 0 80%;
+    margin: 0 auto;
+  }
+}
+.team article img {
+  width: 100%;
+  border-radius: 50%;
+  border: 10px solid #cccac5;
+  opacity: 0.75;
+}
+.team article h3 {
+  color: #ef1f52;
+  padding: 15px 0;
+}
+@media (max-width: 768px) {
+  .team article p {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/***********
+footer
+***********/
+footer {
+  background: linear-gradient(to right, #1f1f1f, #ef1f52);
+  color: #fff;
+  padding: 100px 0;
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 25px 0;
+  }
+}
+footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+  }
+}
+footer .container article {
+  flex: 1;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  footer .container article {
+    padding: 25px 0;
+  }
+}
+footer .container article .logBottom {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+footer .container article .logBottom p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ef1f52;
+}
+
+/*# sourceMappingURL=style.css.map */
