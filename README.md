@@ -10,7 +10,8 @@ U Flex-u:
 5-agency-flex
 
 U Flex, Scss-u:
-6-freelancer-scss-flex
+6-freelancer-scss-flex,
+9-biznis-scss-flex
 
 U Bootstrap, PHP, Scss-u:
 7-shop-bootstrap,
